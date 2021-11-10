@@ -32,7 +32,7 @@ public class PokerHandsControllerTest {
         Integer[] firstHand = new Integer[]{7,5,4,3,2};
         Integer[] secondHand = new Integer[]{7,5,4,3,2};
 
-        List roundHands = List.of(firstHand, secondHand);
+        List<Integer[]> roundHands = List.of(firstHand, secondHand);
 
         MockHttpServletRequestBuilder request = get("/pokerHandResult")
                         .content( new ObjectMapper().writeValueAsString(roundHands))
@@ -49,7 +49,7 @@ public class PokerHandsControllerTest {
         Integer[] firstHand = new Integer[]{2,5,4,3,8};
         Integer[] secondHand = new Integer[]{7,5,4,3,2};
 
-        List roundHands = List.of(firstHand, secondHand);
+        List<Integer[]> roundHands = List.of(firstHand, secondHand);
         MockHttpServletRequestBuilder request = get("/pokerHandResult")
                 .content( new ObjectMapper().writeValueAsString(roundHands))
                 .contentType(MediaType.APPLICATION_JSON);
