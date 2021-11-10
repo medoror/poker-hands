@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CoolController {
+public class PokerHandsController {
 
-    @GetMapping("/coolstuff")
-    public ResponseEntity<String> getCoolStuff() {
-        return ResponseEntity.ok().body("We are so cool.");
+    @GetMapping("/pokerHandResult")
+    public ResponseEntity<String> getPokerHandResult() {
+        return ResponseEntity.ok().body("Draw");
     }
 }
